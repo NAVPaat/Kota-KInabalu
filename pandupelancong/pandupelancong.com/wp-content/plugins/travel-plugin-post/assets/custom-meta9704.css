@@ -1,0 +1,54 @@
+/* Custom Meta Content */
+.custom-meta-content {
+    display: flex;
+    margin: 10px 0;
+  }
+  
+  .post-date-data, .post-author {
+    margin-left: 0.875rem;
+    font-size: 0.875rem;
+  }
+  
+  .post-author {
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin: 0 auto;
+  }
+  
+  img.avatar {
+    border-radius: 1rem;
+    margin-right: 5px;
+  }
+  
+  /* Custom Post Destination - Maklumat Tambahan */
+  .wisata-custom-fields {
+    background-color: #f7f7f7;
+    border: 1px solid rgba(0,0,0,.11);
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), 0 2px 6px rgba(0,0,0,.05);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), 0 2px 6px rgba(0,0,0,.05);
+  }
+  
+  table.wisata-custom-fields-table {
+    margin: 0;
+    padding: 1rem;
+    border: none;
+  }
+  
+  table.wisata-custom-fields-table td {
+    border: none;
+    padding: 0.5rem;
+  }
+  
+  table.wisata-custom-fields-table td {
+    border-bottom: 1px solid #efefef;
+  }
+  
+  /* Tablet layout (two columns) */
+  @media (max-width: 768px) {
+    .custom-meta-content {
+      display: inline-block;
+    }
+  }
+  

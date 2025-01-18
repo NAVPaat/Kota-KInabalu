@@ -1,0 +1,174 @@
+/* Custom Border Radius for Featured Image */
+.attachment-full.size-full.wp-post-image {
+    border-radius: 8px;
+  }
+  
+  /* Yoast Breadcrumbs Custom Style */
+  .yoast-breadcrumbs {
+      font-size: 12px;
+      margin-bottom: 0;
+  }
+  
+  .yoast-breadcrumbs a {
+      font-size: 12px;
+  }
+  
+  .yoast-breadcrumbs .breadcrumb_last {
+      font-size: 12px;
+  }
+  
+  /* Gaya untuk Table of Contents */
+  .toc {
+    background-color: #f7f7f7;
+    border: 1px solid rgba(0,0,0,.11);
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), 0 2px 6px rgba(0,0,0,.05);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), 0 2px 6px rgba(0,0,0,.05);
+    padding: 1rem;
+    margin-bottom: 1.5rem;  /* memberi jarak antara ToC dan konten */
+  }
+  
+  .toc ul {
+    list-style-type: none;  /* menghapus bullet points */
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+  }
+  
+  .toc li {
+    margin-bottom: 0.5rem;  
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 0.4rem;
+  }
+  
+  .toc a {
+    color: #333;  /* warna link */
+    text-decoration: none;  /* menghapus garis bawah dari link */
+    transition: color 0.3s;  /* transisi warna saat di-hover */
+  }
+  
+  .toc a:hover {
+    color: #007BFF;  /* warna link saat di-hover */
+  }
+  
+  /* Gaya untuk tombol toggle */
+  .toc-toggle {
+    cursor: pointer;
+    margin-left: 10px;
+    color: #007BFF; /* warna biru */
+    transition: color 0.3s;
+  }
+  
+  .toc-toggle:hover {
+    color: #0056b3; /* warna biru gelap saat di-hover */
+  }
+  
+  /* Awalnya, sembunyikan list ToC */
+  .toc-list {
+    display: none;
+  }
+  
+  /*style related destination*/
+  .related-destination-posts {
+    margin-top: 20px;
+}
+
+.related-destination-posts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.related-destination-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.related-destination-image {
+    flex: 0 0 150px;
+    margin-right: 20px;
+}
+
+.related-destination-image img {
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    border-radius: 8px;
+}
+
+.related-destination-content {
+    flex: 1;
+}
+
+.related-destination-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.related-destination-content p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+  /* Tablet layout (two columns) */
+  @media (max-width: 768px) {
+    .custom-meta-content {
+      display: inline-block;
+    }
+    .content-article {
+      padding: 0.5rem;
+    }
+    .gp-col {
+      max-width: calc(50% - 24px);
+      flex-basis: 50%;
+    }
+  
+    .gp-col:nth-child(3n) {
+      margin-right: 24px;
+    }
+  
+    .gp-col:nth-child(2n) {
+      margin-right: 0;
+    }
+  
+    .gp-row {
+      margin-right: 0;
+    }
+  
+    .social-share-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  
+    .social-share-buttons .share-button {
+      display: inline-block;
+      width: auto;
+    }
+    
+    .social-share-buttons,
+    .social-share-buttons .share-button {
+      box-sizing: border-box;
+    }
+      .is-right-sidebar.sidebar {
+          padding:1rem;
+      }
+  }
+  
+  /* Media query for desktop and tablet with a minimum screen width of 768px */
+  @media (min-width: 768px) {
+    .content-article, #comments {
+      width: 632px;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Mobile layout (one column) */
+  @media (max-width: 480px) {
+    .gp-col {
+      max-width: 100%;
+      flex-basis: 100%;
+      margin-right: 0;
+    }
+  }
+  
