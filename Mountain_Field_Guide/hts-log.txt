@@ -1,0 +1,16 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 10 Dec 2024 01:56:33 at https://mountainfieldguide.com/mount-kinabalu/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://mountainfieldguide.com/mount-kinabalu/ -O1 "C:\My Web Sites\Mountain Field Guide" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+01:56:59	Warning: 	Found for https://mountainfieldguide.com/mount-kinabalu/?share=facebook
+01:56:59	Warning: 	File has moved from https://mountainfieldguide.com/mount-kinabalu/?share=facebook to https://www.facebook.com/sharer.php?u=https%3A%2F%2Fmountainfieldguide.com%2Fmount-kinabalu%2F&t=Mount%20Kinabalu
+01:56:59	Warning: 	Found for https://mountainfieldguide.com/mount-kinabalu/?share=x
+01:56:59	Warning: 	File has moved from https://mountainfieldguide.com/mount-kinabalu/?share=x to https://x.com/intent/tweet?text=Mount%20Kinabalu&url=https%3A%2F%2Fmountainfieldguide.com%2Fmount-kinabalu%2F
+01:56:59	Error: 	"Not Found" (404) at link https://mountainfieldguide.com/mount-kinabalu/iframe.src (from https://mountainfieldguide.com/mount-kinabalu/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 26 seconds : 74 links scanned, 70 files written (3055522 bytes overall) [2446485 bytes received at 94095 bytes/sec], 943384 bytes transferred using HTTP compression in 37 files, ratio 23%, 4.6 requests per connection
+(1 errors, 4 warnings, 0 messages)
