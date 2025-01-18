@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.mountainiq.com	TRUE	/	FALSE	1999999999	aawp-country	MY
+scripts.mediavine.com	TRUE	/	FALSE	1999999999	AWSALB	4yxs2JWM13EtQDSok+1AecBgyGNVekAkCpX3YMSKN6t8y+et5U8V8iq42+iJ8p4bEaxtbln+u/yO5MabrqmNpA/X4YYDCN/fh/AwOEvPKoArEJdnpYewQlZGQz/I
+scripts.mediavine.com	TRUE	/	FALSE	1999999999	AWSALBCORS	4yxs2JWM13EtQDSok+1AecBgyGNVekAkCpX3YMSKN6t8y+et5U8V8iq42+iJ8p4bEaxtbln+u/yO5MabrqmNpA/X4YYDCN/fh/AwOEvPKoArEJdnpYewQlZGQz/I
+scripts.mediavine.com	TRUE	/	FALSE	1999999999	SameSite	None
+
