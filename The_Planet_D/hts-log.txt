@@ -1,0 +1,18 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 10 Dec 2024 02:34:14 at https://theplanetd.com/mount-kinabalu-2-tough-days-in-borneo/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://theplanetd.com/mount-kinabalu-2-tough-days-in-borneo/ -O1 "C:\My Web Sites\The Planet D" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+02:34:35	Warning: 	Moved Permanently for https://theplanetd.com/mount-kinabalu-2-tough-days-in-borneo/i/
+02:34:35	Warning: 	File has moved from https://theplanetd.com/mount-kinabalu-2-tough-days-in-borneo/i/ to https://theplanetd.com/ice-climbing-the-canadian-rockies-a-world-class-adventure/
+02:34:35	Error: 	"Not Found" (404) at link https://theplanetd.com/mount-kinabalu-2-tough-days-in-borneo/Firefox/ (from https://theplanetd.com/mount-kinabalu-2-tough-days-in-borneo/)
+02:34:35	Error: 	"Not Found" (404) at link https://theplanetd.com/mount-kinabalu-2-tough-days-in-borneo/window.location.href (from https://theplanetd.com/mount-kinabalu-2-tough-days-in-borneo/)
+02:34:35	Warning: 	Moved Permanently for https://theplanetd.com/mount-kinabalu-2-tough-days-in-borneo/GET/
+02:34:35	Warning: 	File has moved from https://theplanetd.com/mount-kinabalu-2-tough-days-in-borneo/GET/ to https://theplanetd.com/get-from-london-airports/
+02:34:35	Error: 	"Not Found" (404) at link https://i.ytimg.com/vi/ID/hqdefault.jpg (from https://theplanetd.com/mount-kinabalu-2-tough-days-in-borneo/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 21 seconds : 35 links scanned, 29 files written (1425367 bytes overall) [1184048 bytes received at 56383 bytes/sec], 677734 bytes transferred using HTTP compression in 10 files, ratio 26%, 4.8 requests per connection
+(3 errors, 4 warnings, 0 messages)

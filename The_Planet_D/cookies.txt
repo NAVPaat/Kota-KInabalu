@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.stay22.com	TRUE	/	FALSE	1999999999	__cf_bm	TaLwLdmdV.spJgzgICzyWJnz0VQbejDdB5tIfoQ5iDU-1733769261-1.0.1.1-f8vFgzSKW6v24lj22DTIY8liesHHm.TOGqs7Z.ycpKinZN2Wklu1j5Z7QUFGXEYWJwenP4Oo0qUUFHAe0rQXWw
+scripts.stay22.com	TRUE	/	FALSE	1999999999	SameSite	None
+
