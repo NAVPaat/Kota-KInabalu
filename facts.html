@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facts</title>
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Basic styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('image/ocean.jpg');
+  background-size: cover; /* Scales the image to cover the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+	  text-align: center;
+    }
+
+    /* Navbar styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo a {
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .navbar .nav-links {
+      list-style-type: none;
+      display: flex;
+    }
+
+    .navbar .nav-links li {
+      margin: 0 20px;
+    }
+
+    .navbar .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar .nav-links li:hover {
+      background-color: #575757;
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+
+    .navbar .dropdown {
+      position: relative;
+    }
+
+    .navbar .dropdown .dropbtn {
+      color: white;
+      font-size: 18px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .navbar .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #7EC8E3;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .navbar .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .navbar .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .navbar .dropdown-content a:hover {
+      background-color: #05445E;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    #search-bar {
+      padding: 8px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #7EC8E3;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #05445E;
+    }
+	
+
+/* Banner styles */
+    .banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 90%;
+      background: url('image/gunung.jpg') no-repeat center center;
+      background-size: cover;
+      position: relative;
+      color: white;
+      text-align: center;
+    }
+
+    .banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay */
+      z-index: 1;
+      border-radius: 10px;
+    }
+
+    .banner div {
+      position: relative;
+      z-index: 2;
+    }
+
+    .banner h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 18px;
+      margin: 0;
+    }
+	 
+        .fact-section {
+            margin-bottom: 40px;
+
+        }
+        .fact-section img {
+            max-width: 40%;
+            height: 50%;
+            display: block;
+            margin: 10px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .fact-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .fact-text {
+            font-size: 18px;
+            color: black;
+			      margin: 0 auto;
+            text-align: justify;
+            max-width: 600px;
+        }
+		
+    /* Footer styles */
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      text-align: left;
+    }
+
+    .footer .footer-section {
+      flex: 1;
+      margin: 10px;
+    }
+
+    .footer h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .footer ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .footer .social-icons a {
+      font-size: 24px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer .social-icons a:hover {
+      color: #4CAF50;
+    }
+
+/* Title styling */
+h1-1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+}
+
+
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #555;
+}
+
+    /* Centered container styles */
+    .centered-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      padding: 10px 20px;
+      border: 2px solid #333;
+      border-radius: 12px;
+      background-color: #ffffff;
+      max-width: 60%; /* Adjust as needed */
+    }
+
+    .main-title {
+      font-size: 70px;
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      text-align: center;
+      margin: 0;
+    }
+
+
+
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#">Kota Kinabalu</a>
+    </div>
+    <ul class="nav-links">
+       <li><a href="index.html">Home</a></li>
+      <li><a href="facts.html">Facts</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Inquiries</a>
+        <div class="dropdown-content">
+          <a href="faq.html">FAQ</a>
+          <a href="contact_us.html">Contact</a>
+       <li><a href="conifer.html">Conifer</a></li>
+       <li><a href="httrack.html">HTTrack</a></li>
+        </div>
+      </li>
+    </ul>
+    <div class="search-container">
+      <input type="text" placeholder="Search..." id="search-bar">
+      <button type="button" onclick="searchFunction()">Search</button>
+    </div>
+  </nav>
+  
+  <!-- Banner -->
+  <div class="banner">
+    <div>
+      <h1-1>Welcome to Facts section</h1-1>
+      <p>In this section you will know facts about Gunung Kinabalu</p>
+    </div>
+  </div>
+   
+<!-- Centered Container Section -->
+<div class="centered-container">
+  <h1 class="main-title">INTERESTING FACTS</h1>
+</div>
+
+    <div class="fact-section">
+        <h2 class="fact-title" style="color: white;">FACTS 1</h2>
+        <img src="image/cord.webp" alt="Description of image 1"> <br>
+        <p class="fact-text" style="color: white;">Mount Kinabalu is one of the most prominent and spectacular landmarks in Southeast Asia. Located in the state of Sabah, Malaysia, this majestic mountain is a part of the Crocker Range and is the highest peak in the region. It stands at an impressive altitude of 4,095 meters above sea level, boasting a vast range of habitats from rich tropical lowland and hill rainforest to tropical mountain forest, sub-alpine forest and scrub on the higher elevations.<br><br>
+
+          As a significant part of Malaysia’s natural heritage, Mount Kinabalu offers visitors an opportunity to explore its diverse ecosystem that is home to thousands of species of flora, many of which are endemic to the area. The mountain’s unique biodiversity has earned it recognition as a UNESCO World Heritage Site. It is not just nature enthusiasts who are drawn to Mount Kinabalu; the mountain is also a favorite destination for mountaineers from around the globe. Despite its formidable height, the peak can be reached without specialized mountaineering equipment or skills, making it accessible for adventurous tourists.</p>
+    </div>
+
+    <div class="fact-section">
+        <h2 class="fact-title" style="color: white;">FACT 2</h2>
+        <img src="image/flower.jpg" alt="Description of image 2"><br>
+        <p class="fact-text" style="color: white;">Sunrise over Mt. Kinabalu silhouette, Kota Kinabalu Sabah Borneo Malaysia. | Nokuro<br>
+          Country: Malaysia<br><br>
+          
+          State/Province: Sabah<br><br>
+          
+          Mountain Range: Crocker Range<br><br>
+          
+          Parents: Crocker Mountains<br><br>
+          
+          Elevation: 13,435 feet / 4,095 meters<br><br>
+          
+          Prominence: 13,435 feet / 4,095 meters<br><br>
+          
+          Isolation: 1561.55 miles / 2513.07 kilometers<br><br>
+          
+          Nearest Higher Neighbor (NHN): Ngga Pilimsit<br><br>
+          
+          First Ascent: In March 1851, Hugh Low summited the mountain’s plateau, but not the extremely steep peak, claiming that it was “inaccessible to any but winged animals.” However, in 1888 John Whitehead ascended the highest peak.
+          </p>
+    </div>
+	
+    <div class="fact-section">
+      <h2 class="fact-title" style="color: white;">FACT 3</h2>
+      <img src="image/gorn.avif" alt="Description of image 2"><br>
+      <p class="fact-text" style="color: white;">1. Kinabalu is a mountain located on the island of Kalimantan, precisely in the state of Sabah, Malaysia<br>
+        2. The highest peak of Mount Kinabalu is at a height of 4,094 meters above sea level. Highest on the island of Kalimantan, you know!<br>
+        3. Kinabalu is also the fifth highest mountain in Southeast Asia<br>
+        4. Mount Kinabalu is a symbol of the greatness of the people of Sabah. This mountain is also depicted in the state emblem of Sabah<br>
+        5. In addition, the name Kinabalu was also adapted into the name of the capital of Sabah, namely Kota Kinabalu</p>
+  </div>
+
+	
+<!-- Back to Top Button -->
+<button id="backToTop">↑</button>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="facts.html">Facts</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="contact_us.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <ul>
+        <li>Email: danialrifaat@kotakinabalu.com</li>
+        <li>Phone: +60 17 992 7051</li>
+        <li>Address: Kota Kinabalu, Sabah, Malaysia</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/daniel.rifaat.3" class="fab fa-facebook-f"></a>
+        <a href="https://x.com/?lang=en" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/?hl=en" class="fab fa-instagram"></a>
+        <a href="https://www.youtube.com/" class="fab fa-youtube"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function searchFunction() {
+      const searchQuery = document.getElementById('search-bar').value;
+      alert("Searching for: " + searchQuery);
+    }
+
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+  
+<script>
+    const backToTopButton = document.getElementById('backToTop');
+  
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    };
+  
+    backToTopButton.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+</body>
+</html>

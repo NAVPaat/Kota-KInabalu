@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kota Kinabalu FAQ</title>
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Basic styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('image/ocean.jpg');
+      background-size: cover; /* Scales the image to cover the entire background */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+      background-position: center; /* Centers the image */
+    }
+
+    /* Navbar styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo a {
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .navbar .nav-links {
+      list-style-type: none;
+      display: flex;
+    }
+
+    .navbar .nav-links li {
+      margin: 0 20px;
+    }
+
+    .navbar .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar .nav-links li:hover {
+      background-color: #575757;
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+
+    .navbar .dropdown {
+      position: relative;
+    }
+
+    .navbar .dropdown .dropbtn {
+      color: white;
+      font-size: 18px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .navbar .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #7EC8E3;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .navbar .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .navbar .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .navbar .dropdown-content a:hover {
+      background-color: #05445E;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    #search-bar {
+      padding: 8px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #7EC8E3;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #05445E;
+    }
+
+    /* Table styles */
+    .table-section {
+      width: 98%;
+      padding: 20px;
+    }
+
+    table {
+      width: 90%;
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+
+    th, td {
+      padding: 13px;
+      text-align: left;
+      border: 2px solid black;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+
+    /* Centered container styles */
+    .centered-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      padding: 10px 20px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      background-color: #ffffff;
+      max-width: 80%; /* Adjust as needed */
+    }
+
+    .main-title {
+      font-size: 70px;
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      text-align: center;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="#">Kota Kinabalu</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="facts.html">Facts</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="activities.html">Activities</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Inquiries</a>
+      <div class="dropdown-content">
+        <a href="faq.html">FAQ</a>
+        <a href="contact_us.html">Contact</a>
+        <a href="conifer.html">Conifer</a>
+        <a href="httrack.html">HTTrack</a>
+      </div>
+    </li>
+  </ul>
+  <div class="search-container">
+    <input type="text" placeholder="Search..." id="search-bar">
+    <button type="button" onclick="searchFunction()">Search</button>
+  </div>
+</nav>
+
+<!-- Centered Container Section -->
+<div class="centered-container">
+  <h1 class="main-title">CONIFER</h1>
+</div>
+
+<!-- Table Section -->
+<section class="table-section">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center;">NO.</th>
+        <th style="text-align: center;">TITLE</th>
+        <th style="text-align: center;">SIZE</th>
+        <th style="text-align: center;">METADATA</th>
+        <th style="text-align: center;">ACTION</th>
+      </tr>
+    </thead>
+    <tbody>
+       <tr>
+         <th style="text-align: center;">1.</th>
+         <th>Mount Kinabalu – What it’s Really Like to Climb Borneo’s Highest Peak</th>
+         <th style="text-align: center;">10.72 MB</th>
+         <th style="text-align: center;">YES</th>
+         <th style="text-align: center;"><button onclick="window.location.href='https://drive.google.com/file/d/1E2C6-24C3K-Z0YXzrHkdEyVMRcSr9OVC/view?usp=drive_link'">View</button></th>
+       </tr>
+       <tr>
+         <th style="text-align: center;">2.</th>
+         <th>Hiking Mount Kinabalu – 11 Best Tips For An Epic Summit</th>
+         <th style="text-align: center;">12.44 MB</th>
+         <th style="text-align: center;">YES</th>
+         <th style="text-align: center;"><button onclick="window.location.href='https://drive.google.com/file/d/1qI-Ng4skOiVUjN6s0Qc4rze52qq0VOPm/view?usp=drive_link'">View</button></th>
+       </tr>
+       <th style="text-align: center;">3.</th>
+       <th>The No.1 Ultimate Hikers Guide To Climb Mount Kinabalu</th>
+       <th style="text-align: center;">16.04 MB</th>
+       <th style="text-align: center;">YES</th>
+       <th style="text-align: center;"><button onclick="window.location.href='https://drive.google.com/file/d/1X2KV7LsGbGChrOJAqL9e2yg_k1VuBDmj/view?usp=drive_link'">View</button></th>
+     </tr>
+      <tr>
+        <th style="text-align: center;">4.</th>
+        <th>Mount Kinabalu</th>
+        <th style="text-align: center;">23.13 MB</th>
+        <th style="text-align: center;">YES</th>
+        <th style="text-align: center;"><button onclick="window.location.href='https://drive.google.com/file/d/1gohLqxvSKQfiSbL1DO6HFPQU5s8W81_Q/view?usp=drive_link'">View</button></th>
+      </tr>
+      <tr>
+        <th style="text-align: center;">5.</th>
+        <th>Gunung Kinabalu</th>
+        <th style="text-align: center;">5.18 MB</th>
+        <th style="text-align: center;">YES</th>
+        <th style="text-align: center;"><button onclick="window.location.href='https://drive.google.com/file/d/1glMwDmgAxP-xk_enM9RqfH9l55n491Q0/view?usp=drive_link'">View</button></th>
+      </tr>
+      <tr>
+        <th style="text-align: center;">6.</th>
+        <th>Keunikan Gunung Kinabalu, tarikan pelancong berkunjung</th>
+        <th style="text-align: center;">3.21 MB</th>
+        <th style="text-align: center;">YES</th>
+        <th style="text-align: center;"><button onclick="window.location.href='https://drive.google.com/file/d/1vTPg6_zlK9hWOWOhY4MmMYQt5_ql5Hlr/view?usp=drive_link'">View</button></th>
+      </tr>
+      <tr>
+        <th style="text-align: center;">7.</th>
+        <th>Pendakian Gunung Kinabalu</th>
+        <th style="text-align: center;">5.40 MB</th>
+        <th style="text-align: center;">YES</th>
+        <th style="text-align: center;"><button onclick="window.location.href='https://drive.google.com/file/d/1-LqENh5hUbBG3W2ODf3NhYMYuU99eZ9K/view?usp=drive_link'">View</button></th>
+      </tr>
+      <tr>
+      <tr>
+        <th style="text-align: center;">8.</th>
+        <th>Mount Kinabalu</th>
+        <th style="text-align: center;">6.82 MB</th>
+        <th style="text-align: center;">YES</th>
+        <th style="text-align: center;"><button onclick="window.location.href='Sabah_Parks/index.html'">View</button></th>
+      </tr>
+
+    </tbody>
+  </table>
+</section>
+
+</body>
+</html>

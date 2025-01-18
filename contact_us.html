@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kota Kinabalu</title>
+  
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Basic styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('image/ocean.jpg');
+       background-size: cover; /* Scales the image to cover the entire background */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+      background-position: center; /* Centers the image */
+    }
+
+    /* Navbar styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo a {
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .navbar .nav-links {
+      list-style-type: none;
+      display: flex;
+    }
+
+    .navbar .nav-links li {
+      margin: 0 20px;
+    }
+
+    .navbar .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar .nav-links li:hover {
+      background-color: #575757;
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+
+    .navbar .dropdown {
+      position: relative;
+    }
+
+    .navbar .dropdown .dropbtn {
+      color: white;
+      font-size: 18px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .navbar .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #7EC8E3;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .navbar .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .navbar .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .navbar .dropdown-content a:hover {
+      background-color: #05445E;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    #search-bar {
+      padding: 8px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #7EC8E3;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #05445E;
+    }
+
+    /* Banner styles */
+    .banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 90%;
+      background: url('image/gunung.jpg') no-repeat center center;
+      background-size: cover;
+      position: relative;
+      color: white;
+      text-align: center;
+    }
+
+    .banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      border-radius: 10px;
+    }
+
+    .banner div {
+      position: relative;
+      z-index: 2;
+    }
+
+    .banner h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    /* Team Section */
+.team-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.team-member {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.team-member p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Center the heading for the team section */
+.team-section h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.contact-form button {
+  display: block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.contact-form button:active {
+  transform: translateY(1px);
+}
+
+/* Center the heading for the contact form */
+.contact-form h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+  
+
+    /* Footer styles */
+    .footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      text-align: left;
+    }
+
+    .footer .footer-section {
+      flex: 1;
+      margin: 10px;
+    }
+
+    .footer h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .footer ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .footer .social-icons a {
+      font-size: 24px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer .social-icons a:hover {
+      color: #4CAF50;
+    }
+	
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+	
+#backToTop:hover {
+    background-color: #555;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#">Kota Kinabalu</a>
+    </div>
+    <ul class="nav-links">
+       <li><a href="index.html">Home</a></li>
+      <li><a href="facts.html">Facts</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Inquiries</a>
+        <div class="dropdown-content">
+          <a href="faq.html">FAQ</a>
+          <a href="contact_us.html">Contact</a>
+       <li><a href="conifer.html">Conifer</a></li>
+       <li><a href="httrack.html">HTTrack</a></li>
+        </div>
+      </li>
+    </ul>
+    <div class="search-container">
+      <input type="text" placeholder="Search..." id="search-bar">
+      <button type="button" onclick="searchFunction()">Search</button>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <div class="banner">
+    <div>
+      <h1>Welcome to contact section</h1>
+      <p>lets make connection with us regarding your interest in gunung kinabalu</p>
+    </div>
+  </div>
+
+
+<section>
+  <center><h2 style="color: white;">MEET OUR TEAM</h2></center>
+  <div class="team-section">
+    <div class="team-member">
+      <img src="image/syu.jpg" alt="Team Member 1">
+      <h3>NURUL SYUHAIDA BINTI ABDUL RAHMAN</h3>
+      <p>Web Developer</p>
+    </div>
+    <div class="team-member">
+      <img src="image/azwa.jpg" alt="Team Member 2">
+      <h3>WAHIDATUL AZWA BINTI ABD MANAF</h3>
+      <p>UI/UX Designer</p>
+    </div>
+	<div class="team-member">
+      <img src="image/paat.jpg" alt="Team Member 3">
+      <h3>MUHAMMAD DANIAL RIFAAT BIN AB MANAF</h3>
+      <p>Project Manager</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Form -->
+<section>
+  <center><h2 style="color: white;">CONTACT US</h2></center>
+  <form class="contact-form">
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Your name" required>
+    
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Your email" required>
+    
+    <label for="message">Message</label>
+    <textarea id="message" rows="5" placeholder="Your message"></textarea>
+    
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<!-- Back to Top Button -->
+<button id="backToTop">↑</button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="facts.html">Facts</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="contact_us.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <ul>
+        <li>Email: danialrifaat@kotakinabalu.com</li>
+        <li>Phone: +60 17 992 7051</li>
+        <li>Address: Kota Kinabalu, Sabah, Malaysia</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/daniel.rifaat.3" class="fab fa-facebook-f"></a>
+        <a href="https://x.com/?lang=en" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/?hl=en" class="fab fa-instagram"></a>
+        <a href="https://www.youtube.com/" class="fab fa-youtube"></a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  function searchFunction() {
+    const query = document.getElementById('search-bar').value;
+    alert("Searching for: " + query);
+  }
+</script>
+
+<script>
+    const backToTopButton = document.getElementById('backToTop');
+  
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    };
+  
+    backToTopButton.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+</body>
+</html>

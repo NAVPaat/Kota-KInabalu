@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kota Kinabalu</title>
+  
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Basic styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('image/ocean.jpg');
+      background-size: cover; /* Scales the image to cover the entire background */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+      background-position: center; /* Centers the image */
+    }
+
+    /* Navbar styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo a {
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .navbar .nav-links {
+      list-style-type: none;
+      display: flex;
+    }
+
+    .navbar .nav-links li {
+      margin: 0 20px;
+    }
+
+    .navbar .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar .nav-links li:hover {
+      background-color: #575757;
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+
+    .navbar .dropdown {
+      position: relative;
+    }
+
+    .navbar .dropdown .dropbtn {
+      color: white;
+      font-size: 18px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .navbar .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #7EC8E3;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .navbar .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .navbar .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .navbar .dropdown-content a:hover {
+      background-color: #05445E;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    #search-bar {
+      padding: 8px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #7EC8E3;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #05445E;
+    }
+
+    /* Banner styles */
+    .banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 90%;
+      background: url('image/gunung.jpg') no-repeat center center;
+      background-size: cover;
+      position: relative;
+      color: white;
+      text-align: center;
+    }
+
+    .banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      border-radius: 10px;
+    }
+
+    .banner div {
+      position: relative;
+      z-index: 2;
+    }
+
+    .banner h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .banner p {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-section h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .faq {
+      margin: 15px 0;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .faq:hover {
+      background-color: #f1f1f1;
+    }
+
+    .faq h3 {
+      font-size: 18px;
+      color: #333;
+      margin: 0;
+      position: relative;
+    }
+
+    .faq h3::after {
+      content: '+';
+      position: absolute;
+      right: 10px;
+      font-size: 18px;
+      transition: transform 0.3s;
+    }
+
+    .faq.open h3::after {
+      content: '-';
+      transform: rotate(180deg);
+    }
+
+    .faq p {
+      font-size: 16px;
+      color: #555;
+      margin: 10px 0 0;
+      padding: 0 10px;
+      display: none;
+    }
+
+    .faq.open p {
+      display: block;
+      animation: fadeIn 0.3s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+  
+    /* Footer styles */
+    .footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      text-align: left;
+    }
+
+    .footer .footer-section {
+      flex: 1;
+      margin: 10px;
+    }
+
+    .footer h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .footer ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .footer .social-icons a {
+      font-size: 24px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer .social-icons a:hover {
+      color: #4CAF50;
+    }
+	
+/* Title styling */
+h1-1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+	
+#backToTop:hover {
+    background-color: #555;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#">Kota Kinabalu</a>
+    </div>
+    <ul class="nav-links">
+       <li><a href="index.html">Home</a></li>
+      <li><a href="facts.html">Facts</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Inquiries</a>
+        <div class="dropdown-content">
+          <a href="faq.html">FAQ</a>
+          <a href="contact_us.html">Contact</a>
+       <li><a href="conifer.html">Conifer</a></li>
+       <li><a href="httrack.html">HTTrack</a></li>
+        </div>
+      </li>
+    </ul>
+    <div class="search-container">
+      <input type="text" placeholder="Search..." id="search-bar">
+      <button type="button" onclick="searchFunction()">Search</button>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <div class="banner">
+    <div>
+      <h1-1>Welcome to Kota Kinabalu</h1-1>
+      <p>Discover the beauty, culture, and adventures of this vibrant destination.</p>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <section id="faq-section" class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq" onclick="toggleFaq(this)">
+      <h3>Question 1: Has Mount Kinabalu ever experienced earth damage?</h3>
+      <p>Kejadian tanah runtuh yang sempat dirakam orang awam di kawasan Gunung Kinabalu, Mesilau, Kundasang, awal pagi Ahad. -Media sosial 24/06/2024<br><br>
+        RANAU: Kejadian tanah runtuh berlaku di kawasan Gunung Kinabalu, Mesilau, Kundasang, dekat sini, awal pagi Ahad.</p>
+    </div>
+    <div class="faq" onclick="toggleFaq(this)">
+      <h3>Question 2. When is the best time to Hike Mount Kinabalu?
+      </h3>
+      <p>Mount Kinabalu can be summited throughout the year, however, this is weather permitting. In the event that the weather is deemed too dangerous to hike then Sabah Parks Authority will close the gate to the summit for obvious safety reasons.
+        March to September is the peak hiking period for Mount Kinabalu, however we recommend March and April for the best weather to summit Mount Kinabalu. You’ll have clearer skies for epic photo opportunities. 
+        June and September are still good months to hike, but the temperature can be extremely hot during this time.</p>
+    </div>
+    <div class="faq" onclick="toggleFaq(this)">
+      <h3>Question 3: Is there anything at the top of Mount Kinabalu?</h3>
+      <p>The flora and fauna found around the mountain are more than 5000 species. As we know, there are pitcher plants, Rafflesia flowers, woodpeckers, ground squirrels, muskrats and many more</p>
+    </div>
+    <div class="faq" onclick="toggleFaq(this)">
+      <h3>Question 4: How To Climb Mount Kinabalu with Kids?
+      </h3>
+      <p>1: Consider Altitude Sickness<br><br>
+        2: Pre-Book Accommodation<br><br>
+        3: Budget for Permits</p>
+    </div>
+  </section>
+
+
+
+<!-- Back to Top Button -->
+<button id="backToTop">↑</button>
+ 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="facts.html">Facts</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="contact_us.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <ul>
+        <li>Email: danialrifaat@kotakinabalu.com</li>
+        <li>Phone: +60 17 992 7051</li>
+        <li>Address: Kota Kinabalu, Sabah, Malaysia</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/daniel.rifaat.3" class="fab fa-facebook-f"></a>
+        <a href="https://x.com/?lang=en" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/?hl=en" class="fab fa-instagram"></a>
+        <a href="https://www.youtube.com/" class="fab fa-youtube"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function searchFunction() {
+      const searchQuery = document.getElementById('search-bar').value;
+      alert("Searching for: " + searchQuery);
+    }
+
+    function toggleFaq(faq) {
+      const isOpen = faq.classList.contains('open');
+      document.querySelectorAll('.faq').forEach(f => f.classList.remove('open'));
+      if (!isOpen) faq.classList.add('open');
+    }
+  </script>
+
+<script>
+    const backToTopButton = document.getElementById('backToTop');
+  
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    };
+  
+    backToTopButton.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+</body>
+</html>
